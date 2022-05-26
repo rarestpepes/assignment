@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import SingleCountry from "./SingleCountry";
-import {useEffect, useState} from "react";
+import MyContext from "../../context/MyContext";
+import {useEffect} from "react";
 
 const AllCountries = () => {
 
-    const [getAllCountries, setAllCountries] = useState(null)
+    const {getAllCountries,
+        setAllCountries,
+        setCountryCount,
+        getCountryCount,
+        getCurrentPage,
+        getCurrentPageCountries,
+        setCurrentPageCountries,
+    } = useContext(MyContext)
 
     useEffect(() => {
         fetch("https://restcountries.com/v2/all?fields=name,region,area")
             .then(res => res.json())
             .then(data => {
                 setAllCountries(data)
-                console.log(getAllCountries[0])
+                setCountryCount(data.length)
+                setCurrentPageCountries(getAllCountries.slice(1, 10))
+                console.log(getAllCountries.slice(0, 10))
             })
     },[])
 
 
+
     return (
         <div className={"p30"}>
-            {getAllCountries && getAllCountries.map((x, i) => <SingleCountry country={x} key={i}/>)}
+            {getCurrentPageCountries && getCurrentPageCountries.map((x, i) => <SingleCountry country={x} key={i}/>)}
         </div>
     );
 };

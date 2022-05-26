@@ -26,3 +26,14 @@
     background: rgb(204,255,204);
     color: rgb(103, 110, 103);
 }
+.pgnBtn {
+    height: 30px;
+    width: 30px;
+    background: #3cc43c;
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+}
