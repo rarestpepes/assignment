@@ -21,7 +21,7 @@ const Pagination = ({countryCount}) => {
     }
 
     return (
-        <div className={"d-flex w100 "}>
+        <div className={"d-flex w100 js-center"}>
             {pageCount.map((x,i) =>
                 <div key={i}
                      onClick={() => setPage(x)}

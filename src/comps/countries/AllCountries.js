@@ -20,8 +20,7 @@ const AllCountries = () => {
             .then(data => {
                 setAllCountries(data)
                 setCountryCount(data.length)
-                setCurrentPageCountries(getAllCountries.slice(1, 10))
-                console.log(getAllCountries.slice(0, 10))
+                setCurrentPageCountries(data.slice(0, 10))
             })
     },[])
 
@@ -29,7 +28,7 @@ const AllCountries = () => {
 
     return (
         <div className={"p30"}>
-            {getCurrentPageCountries && getCurrentPageCountries.map((x, i) => <SingleCountry country={x} key={i}/>)}
+            {getCurrentPageCountries !== null && getCurrentPageCountries.map((x, i) => <SingleCountry country={x} key={i}/>)}
         </div>
     );
 };

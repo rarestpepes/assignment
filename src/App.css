@@ -9,6 +9,9 @@
 .sp-btw {
     justify-content: space-between;
 }
+.js-center {
+    justify-content: center;
+}
 
 
 .w100 {
