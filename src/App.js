@@ -3,8 +3,9 @@ import AllCountries from "./comps/countries/AllCountries";
 import Toolbar from "./comps/toolbar/Toolbar";
 
 function App() {
+
   return (
-    <div className="">
+    <div className="App">
         <Toolbar/>
         <AllCountries/>
     </div>

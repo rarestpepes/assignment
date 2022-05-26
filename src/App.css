@@ -1,3 +1,28 @@
+.App {
+    font-family: monospace;
+    background: rgb(227,255,227);
+}
+
 .d-flex {
     display: flex;
+}
+.sp-btw {
+    justify-content: space-between;
+}
+
+
+.w100 {
+    width: 100%;
+}
+.p10 {
+    padding: 10px;
+}
+.p30 {
+    padding: 30px;
+}
+
+.countryComp div {
+    font-size: 20px;
+    background: rgb(204,255,204);
+    color: rgb(103, 110, 103);
 }
