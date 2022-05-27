@@ -12,6 +12,7 @@ function App() {
     const [getCountryCount, setCountryCount] = useState(null)
     const [getCurrentPage, setCurrentPage] = useState(1)
     const [getCurrentPageCountries, setCurrentPageCountries] = useState(null)
+    const [getPageCount, setPageCount] = useState([])
 
     return (
         <div className="App">
@@ -24,7 +25,9 @@ function App() {
                 getCurrentPage,
                 setCurrentPage,
                 getCurrentPageCountries,
-                setCurrentPageCountries
+                setCurrentPageCountries,
+                getPageCount,
+                setPageCount
             }}>
                 <Toolbar/>
                 {getCountryCount > 10 && <Pagination countryCount={getCountryCount}/>}

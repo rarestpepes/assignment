@@ -5,11 +5,9 @@ import {useEffect} from "react";
 
 const AllCountries = () => {
 
-    const {getAllCountries,
+    const {
         setAllCountries,
         setCountryCount,
-        getCountryCount,
-        getCurrentPage,
         getCurrentPageCountries,
         setCurrentPageCountries,
     } = useContext(MyContext)

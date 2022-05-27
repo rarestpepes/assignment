@@ -1,6 +1,7 @@
 .App {
     font-family: monospace;
     background: rgb(227,255,227);
+    height: 100vh;
 }
 
 .d-flex {
@@ -39,4 +40,25 @@
     align-items: center;
     justify-content: center;
     color: wheat;
+}
+
+.sortBtn {
+    font-size: 20px;
+    background: rgb(143,255,143);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sortBtn:hover {
+    border-radius: 0;
+    transition: 0.3s;
+}
+.dropdown {
+    position: absolute;
+    background: #56e756;
+}
+.dropdown div:hover {
+    background: #3cc43c;
+    cursor: pointer;
 }

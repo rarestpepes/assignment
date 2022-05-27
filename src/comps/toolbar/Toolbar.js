@@ -1,12 +1,10 @@
 import React from 'react';
 import SelectFilter from "./SelectFilter";
-import Search from "./Search";
 
 const Toolbar = () => {
     return (
-        <div className={"d-flex"}>
+        <div className={"d-flex p10"}>
             <SelectFilter/>
-            <Search/>
         </div>
     );
 };
